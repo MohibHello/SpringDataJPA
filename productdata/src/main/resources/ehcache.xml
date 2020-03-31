@@ -1,0 +1,19 @@
+<ehcache>
+
+	<!-- path to store the object temporary directory to store in disk or ram -->
+	<!-- "java.io.tmpdir" tmpdir is in-build variable that points to temporary 
+		directory -->
+	<diskStore path="java.io.tmpdir" />
+
+	<!-- maxElementsInMemory="100" -> maximum element in memory that to be cached -->
+	<!-- eternal="false" -> object in cache should be destroyed after some time 
+		otherwise we run out of memory -->
+	<!-- timeToIdleSeconds="5" -> object to be removed from cache if its idle 
+		for more than specified time -->
+	<!-- timeToLiveSeconds="10" -> object to be present in cache for specified 
+		time -->
+	<!-- overFlowToDisk="true" -> if memory runs out store in disk -->
+	<defaultCache maxElementsInMemory="100" eternal="false"
+		timeToIdleSeconds="5" timeToLiveSeconds="10" overflowToDisk="true" />
+
+</ehcache>
